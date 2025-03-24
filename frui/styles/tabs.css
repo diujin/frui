@@ -1,0 +1,37 @@
+/* Tabs container */
+.tabs-header {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Individual tab buttons */
+  .tab-button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    color: #555;
+    border-bottom: 3px solid transparent;
+  }
+  
+  /* Active tab styling */
+  .tab-button.active {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  /* Hover effect */
+  .tab-button:hover {
+    color: #007bff;
+  }
+  
+  /* Content area */
+  .tabs-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #fff;
+  }

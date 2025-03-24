@@ -7,3 +7,4 @@ export * from './Fieldset';
 export * from './Loader';
 export * from './Modal';
 export *  from './Table';
+export * from './Tabs'
