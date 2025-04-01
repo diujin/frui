@@ -1,37 +1,128 @@
-/* Tabs container */
-.tabs-header {
-    display: flex;
-    border-bottom: 2px solid #ddd;
-  }
-  
-  /* Individual tab buttons */
-  .tab-button {
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-    color: #555;
-    border-bottom: 3px solid transparent;
-  }
-  
-  /* Active tab styling */
-  .tab-button.active {
-    font-weight: bold;
-    color: #000;
-    border-bottom: 3px solid #007bff;
-  }
-  
-  /* Hover effect */
-  .tab-button:hover {
-    color: #007bff;
-  }
-  
-  /* Content area */
-  .tabs-content {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-top: none;
-    background: #fff;
-  }
+/* Base styles for the tabs container */
+.tabs {
+  width: 100%;
+}
+
+/* Tab list styles */
+.tab-list {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+
+/* Individual tab styles */
+.tab {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+  user-select: none;
+}
+
+.tab-active {
+  background-color: #4dc0ee;
+  border-bottom: 2px solid #007bff;
+}
+
+.tab-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #e0e0e0;
+}
+
+.tab-icon {
+  display: none;
+  margin-right: 5px;
+}
+
+.tab-icon-show {
+  display: inline-block;
+}
+
+.tab-label {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+}
+
+/* Tab panel styles */
+.tab-panels {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+}
+
+.tab-panel {
+  display: none; 
+}
+
+.tab-panel-active {
+  display: block; 
+}
+
+/* Prop: Scrollable */
+.tab-list-scrollable {
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%; 
+}
+
+/* Prop: Vertical Orientation */
+.tab-list-vertical {
+  flex-direction: column;
+}
+
+.tab-vertical {
+  border-radius: 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs-vertical .tab-container {
+  display: flex;
+  gap: 15px;
+}
+
+
+.tabs-vertical .tab-list {
+  flex-shrink: 0; 
+  width: 200px;
+}
+
+.tabs-vertical .tab-panels {
+  flex-grow: 1;
+}
+
+/* Prop: Centered */
+.tab-list-centered {
+  justify-content: center;
+}
+
+/* Prop: FullWidth */
+.tab-list-fullwidth {
+  display: flex;
+  justify-content: space-between;
+  gap: 0; 
+}
+
+.tab-list-fullwidth .tab {
+  flex: 1;
+  text-align: center;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.tab-list-fullwidth .tab {
+  width: 100%;
+}
+
+/* Prop: Wrap (applied via Tabs prop affecting all tabs) */
+.tabs.wrap .tab-label {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
